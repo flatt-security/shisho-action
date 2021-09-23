@@ -39,3 +39,6 @@ runs:
     - "${{ inputs.output-path }}"
     - -e
     - "${{ inputs.succeed-always }}"
+branding:
+  icon: "check-circle"
+  color: "blue"
