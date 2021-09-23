@@ -5,6 +5,7 @@
 [![GitHub Release][release-img]][release]
 [![GitHub Marketplace][marketplace-img]][marketplace]
 [![License][license-img]][license]
+[![Documentation][documentation-img]][documentation]
 
 ![Screen example](docs/images/action.png)
 
@@ -78,3 +79,5 @@ This action has the following inputs that can be used as `step.with` keys:
 [marketplace-img]: https://img.shields.io/badge/marketplace-shisho--action-blue?logo=github
 [license]: https://github.com/flatt-security/shisho-action/blob/main/LICENSE
 [license-img]: https://img.shields.io/github/license/flatt-security/shisho-action
+[documentation]: https://docs.shisho.dev
+[documentation-img]: https://img.shields.io/badge/docs-docs.shisho.dev-purple
