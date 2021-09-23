@@ -1,0 +1,41 @@
+name: "Shisho Action"
+author: "Flatt Security"
+description: "Analyze and refactor your codebase with your own lint rules"
+inputs:
+  ruleset-path:
+    required: true
+    description: |
+      Path of rule sets.
+  target-path:
+    required: true
+    description: |
+      Path of files to search over. When you specify the path of a directory, Shisho search all files under the directory recursively.
+    default: "./"
+  output-format:
+    required: false
+    description: |
+      Output format. You can use `json`, `console`, and `sarif`.
+  output-path:
+    required: false
+    description: |
+      Path to put the output of Shisho. When unspecified, Shisho will use stdout.
+    default: "/dev/stdout"
+  succeed-always:
+    required: false
+    description: |
+      Flag that describes whether Shisho should exit with 0 regardless of the number of findings.
+    default: "false"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - -a
+    - "${{ inputs.ruleset-path }}"
+    - -b
+    - "${{ inputs.target-path }}"
+    - -c
+    - "${{ inputs.output-format }}"
+    - -d
+    - "${{ inputs.output-path }}"
+    - -e
+    - "${{ inputs.succeed-always }}"
