@@ -10,7 +10,7 @@ inputs:
     required: true
     description: |
       Path of files to search over. When you specify the path of a directory, Shisho search all files under the directory recursively.
-    default: "./"
+    default: "/github/workspace/"
   output-format:
     required: false
     description: |
@@ -18,7 +18,7 @@ inputs:
   output-path:
     required: false
     description: |
-      Path to put the output of Shisho. When unspecified, Shisho will use stdout.
+      Path to store outputs of Shisho. When unspecified, Shisho will use stdout.
     default: "/dev/stdout"
   succeed-always:
     required: false
