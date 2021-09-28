@@ -75,7 +75,7 @@ This action has the following inputs that can be used as `step.with` keys:
 
 [release]: https://github.com/flatt-security/shisho-action/releases/latest
 [release-img]: https://img.shields.io/github/release/flatt-security/shisho-action.svg?logo=github
-[marketplace]: https://github.com/marketplace/actions/flatt-security-shisho
+[marketplace]: https://github.com/marketplace/actions/shisho-action
 [marketplace-img]: https://img.shields.io/badge/marketplace-shisho--action-blue?logo=github
 [license]: https://github.com/flatt-security/shisho-action/blob/main/LICENSE
 [license-img]: https://img.shields.io/github/license/flatt-security/shisho-action
