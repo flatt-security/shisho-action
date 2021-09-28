@@ -1,4 +1,4 @@
-FROM ghcr.io/flatt-security/shisho-cli:v0.3.1 AS cli
+FROM ghcr.io/flatt-security/shisho-cli:v0.3.2 AS cli
 
 # ----
 
