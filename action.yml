@@ -25,6 +25,12 @@ inputs:
     description: |
       Flag that describes whether Shisho should exit with 0 regardless of the number of findings.
     default: "false"
+  paths-ignore:
+    required: false
+    description: |
+      Comma-seprated lists of path patterns that you want Shisho to ignore. You can use wildcards like "*" and "**".
+      Example: node_modules/*,foo/,./bar*
+    default: ""
 runs:
   using: "docker"
   image: "Dockerfile"
@@ -39,6 +45,8 @@ runs:
     - "${{ inputs.output-path }}"
     - -e
     - "${{ inputs.succeed-always }}"
+    - -f
+    - "${{ inputs.paths-ignore }}"
 branding:
   icon: "check-circle"
   color: "blue"

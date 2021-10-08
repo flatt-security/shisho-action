@@ -1,7 +1,7 @@
 #!/bin/sh
 
 unset GETOPT_COMPATIBLE
-OPTIONS=$(getopt -o a:b:c:d:e: -- "$@")
+OPTIONS=$(getopt -o a:b:c:d:e:f: -- "$@")
 eval set -- "$OPTIONS"
 
 while [ $# -gt 0 ]; do
@@ -26,6 +26,10 @@ while [ $# -gt 0 ]; do
     export SUCCEED_ALWAYS=$2
     shift
     ;;
+  -f)
+    export PATHS_IGNORE=$2
+    shift
+    ;;
   --)
     shift
     break
@@ -41,6 +45,10 @@ fi
 if [ "$SUCCEED_ALWAYS" = "true" ]; then
   ARGS="$ARGS --exit-zero"
 fi
+
+for PATH_TO_IGNORE in ${PATHS_IGNORE//,/ }; do
+  ARGS="$ARGS --exclude \"$PATH_TO_IGNORE\""
+done
 
 echo "[Run]"
 echo "command: shisho check $ARGS"

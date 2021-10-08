@@ -72,6 +72,7 @@ This action has the following inputs that can be used as `step.with` keys:
 | `output-format`           | String |                      | Output format (one of `json`, `console`, and `sarif`)                                                |
 | `output-path`             | String | `/dev/stdout`        | Path of output files (When you specify `/dev/stdout`, you can output the results to standard output) |
 | `succeed-always`          | bool   | `false`              | Whether to force exit code to be 0 regardless of findings.                                           |
+| `paths-ignore`            | String |                      | Comma-separated lists of path patterns to ignore. Example: `node_modules/*,foo/,./bar`               |
 
 [release]: https://github.com/flatt-security/shisho-action/releases/latest
 [release-img]: https://img.shields.io/github/release/flatt-security/shisho-action.svg?logo=github
